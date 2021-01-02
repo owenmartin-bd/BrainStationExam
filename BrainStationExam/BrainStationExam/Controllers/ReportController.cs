@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BrainStationExam.Controllers
 {
-    public class AccountController : Controller
+    public class ReportController : Controller
     {
         public IActionResult Index()
         {
