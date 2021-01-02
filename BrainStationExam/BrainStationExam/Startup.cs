@@ -1,4 +1,5 @@
 using BrainStationExam.Data;
+using BrainStationExam.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -28,6 +29,11 @@ namespace BrainStationExam
         {
             services.AddDbContext<ExamContext>(
                 options => options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
+            services.AddControllersWithViews();
+
+            services.AddScoped<IReportRepository, ReportRepository>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,15 +43,17 @@ namespace BrainStationExam
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseStaticFiles();
 
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                endpoints.MapDefaultControllerRoute();
+                //endpoints.MapGet("/", async context =>
+                //{
+                //    await context.Response.WriteAsync("Hello World!");
+                //});
             });
         }
     }

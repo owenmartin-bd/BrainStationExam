@@ -72,3 +72,5 @@ E:\Exam\BrainStationExam\BrainStationExam\bin\Debug\netcoreapp3.1\runtimes\win\l
 E:\Exam\BrainStationExam\BrainStationExam\obj\Debug\netcoreapp3.1\BrainStationExam.Views.pdb
 E:\Exam\BrainStationExam\BrainStationExam\obj\Debug\netcoreapp3.1\BrainStationExam.csproj.CopyComplete
 E:\Exam\BrainStationExam\BrainStationExam\obj\Debug\netcoreapp3.1\BrainStationExam.genruntimeconfig.cache
+E:\Exam\BrainStationExam\BrainStationExam\obj\Debug\netcoreapp3.1\BrainStationExam.csprojAssemblyReference.cache
+E:\Exam\BrainStationExam\BrainStationExam\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
