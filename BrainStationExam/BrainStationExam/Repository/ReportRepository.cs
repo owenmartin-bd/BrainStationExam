@@ -22,7 +22,12 @@ namespace BrainStationExam.Repository
 
         public async Task<List<Post>> GetPosts()
         {
-            return await _context.Posts.ToListAsync();
+            return await _context.Posts.Include(e => e.Comments).ToListAsync();
+        }
+
+        public async Task<List<Comment>> GetAllComents()
+        {
+            return await _context.Comments.ToListAsync();
         }
     }
 }

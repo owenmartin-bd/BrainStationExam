@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace BrainStationExam.Controllers
 {
+    [Route("[controller]/[action]")]
     public class ReportController : Controller
     {
         private readonly IReportRepository _reportRepository;

@@ -10,5 +10,6 @@ namespace BrainStationExam.Repository
     {
         Task<List<Post>> GetPosts();
         Task<Post> GetPostById(int id);
+        Task<List<Comment>> GetAllComents();
     }
 }
